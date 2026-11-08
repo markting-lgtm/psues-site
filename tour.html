@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Villa Tour | Walk through Psusennes Villas, Munggu Bali</title>
+<meta name="description" content="Walk into a Psusennes villa room by room: tap the gold points to move, tap a surface to see its material, code and brand. 3 bedrooms, private pool, rooftop BBQ.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://psues.com/tour">
+<meta name="theme-color" content="#f8f4ec">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Psusennes Developments">
+<meta property="og:title" content="Walk through the villa | Psusennes Villas, Munggu Bali">
+<meta property="og:description" content="Room by room, from the front door to the rooftop. Tap any surface to see the material.">
+<meta property="og:url" content="https://psues.com/tour">
+<meta property="og:image" content="https://res.cloudinary.com/vhtu15vv/image/upload/f_jpg,q_auto,w_1200,h_630,c_fill,g_auto/psusennes/originals/02_kitchen_dining_living.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Walk through the villa | Psusennes Villas, Munggu Bali">
+<meta name="twitter:description" content="Room by room, from the front door to the rooftop. Tap any surface to see the material.">
+<meta name="twitter:image" content="https://res.cloudinary.com/vhtu15vv/image/upload/f_jpg,q_auto,w_1200,h_630,c_fill,g_auto/psusennes/originals/02_kitchen_dining_living.jpg">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://res.cloudinary.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/site.css">
+<script>document.documentElement.classList.add("js")</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="header-wrap"><a href="/" class="brand" aria-label="Psusennes Developments, home"><img src="https://res.cloudinary.com/vhtu15vv/image/upload/f_auto,q_auto,w_420,c_limit/psusennes/brand/logo_gold" alt="Psusennes Developments" width="140" height="33"><span class="brand-text">Psusennes</span></a><nav class="nav" aria-label="Main"><a href="/tour" class="nav-link" aria-current="page">Tour</a><a href="/plan" class="nav-link">Plan</a><a href="/villa" class="nav-link">The Villa</a><a href="/progress" class="nav-link">Progress</a><a href="/company" class="nav-link">Company</a><a href="/contact" class="nav-link">Contact</a><a href="https://wa.me/6281228636230?text=Hi%20Psusennes%2C%20I%20have%20a%20question%20about%20your%20villas%20in%20Munggu." class="nav-cta" target="_blank" rel="noopener">WhatsApp</a></nav><button type="button" class="menu-btn" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu"><span class="menu-bar"></span><span class="menu-bar"></span></button></div><nav class="mobile-nav" id="mobile-nav" aria-label="Mobile"><a href="/" class="mobile-link">Home</a><a href="/tour" class="mobile-link" aria-current="page">Villa Tour</a><a href="/plan" class="mobile-link">Floor Plan</a><a href="/villa" class="mobile-link">The Villa</a><a href="/progress" class="mobile-link">Progress</a><a href="/company" class="mobile-link">Company</a><a href="/contact" class="mobile-link">Contact</a><a href="https://wa.me/6281228636230?text=Hi%20Psusennes%2C%20I%20have%20a%20question%20about%20your%20villas%20in%20Munggu." class="btn-gold" target="_blank" rel="noopener">WhatsApp us</a></nav></header>
+<main id="main">
+<section id="viewer" class="tour-shell" aria-label="Villa tour"><!-- VILLA TOUR (room-by-room viewer). Gold pulsing point = walk to the next room (plays the transition clip).
+     Small gold rings = materials: tap to see code, name and brand. Deep links: /tour#master, /tour#rooftop ...
+     Data block D: S = scenes in walking order (p = Cloudinary image id, h = next-room hotspot [x%,y%,label],
+     m = material hotspots [code,x%,y%], c = all material codes of the room, w = transition clip id),
+     M = materials {code:[name,brand,area]}, SW = swatch images. Mirrors the Rooms / Materials CMS collections. -->
+<style>
+.tour-app{position:relative;height:100svh;min-height:520px;overflow:hidden;background:linear-gradient(160deg,#e4dccf,#efe6d8);touch-action:pan-y;font-family:Jost,sans-serif}
+.tour-app *{box-sizing:border-box}
+.ta-scene{position:absolute;inset:0;opacity:0;transition:opacity .7s ease;pointer-events:none}
+.ta-scene.on{opacity:1;pointer-events:auto}
+.ta-stage{position:absolute}
+.ta-stage img{width:100%;height:100%;display:block;object-fit:cover;user-select:none;-webkit-user-drag:none}
+.ta-scene.on .ta-stage img{animation:taKen 14s ease-out both}
+@keyframes taKen{from{transform:scale(1.06)}to{transform:scale(1)}}
+.ta-top{position:absolute;left:0;right:0;top:0;height:150px;background:linear-gradient(180deg,rgba(248,244,236,.9),rgba(248,244,236,0));pointer-events:none;z-index:3}
+.ta-walk{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .45s;z-index:4;pointer-events:none;background:#000}
+.ta-walk.on{opacity:1}
+.ta-walk.pt{object-fit:contain;background:#1d1712}
+.ta-go{position:absolute;transform:translate(-50%,-50%);z-index:5;border:0;background:none;cursor:pointer;display:flex;align-items:center;gap:10px;padding:0}
+.ta-go .d{width:26px;height:26px;border-radius:50%;background:#c89d64;box-shadow:0 0 0 0 rgba(200,157,100,.7);animation:taP 1.8s infinite;border:3px solid #fff}
+@keyframes taP{0%{box-shadow:0 0 0 0 rgba(200,157,100,.75)}70%{box-shadow:0 0 0 22px rgba(200,157,100,0)}100%{box-shadow:0 0 0 0 rgba(200,157,100,0)}}
+.ta-go .l{background:rgba(0,0,0,.55);color:#fff;font:600 12px/1 Jost,sans-serif;letter-spacing:.18em;text-transform:uppercase;padding:9px 12px;border-radius:2px;white-space:nowrap}
+.ta-m{position:absolute;transform:translate(-50%,-50%) scale(.6);opacity:0;z-index:5;min-width:34px;height:34px;border-radius:17px;padding:0 5px;white-space:nowrap;border:2px solid #c89d64;background:rgba(255,255,255,.88);color:#4a3f35;font:700 10px/30px Jost,sans-serif;text-align:center;cursor:pointer;padding:0;transition:transform .45s cubic-bezier(.2,.8,.2,1.3),opacity .4s,background .2s}
+.ta-scene.on .ta-m{opacity:1;transform:translate(-50%,-50%) scale(1)}
+.ta-m:hover,.ta-m.sel{background:#c89d64;color:#2b2118}
+.tour-app.hide-m .ta-m{opacity:0!important;pointer-events:none}
+.ta-band{position:absolute;left:0;right:0;bottom:0;z-index:6;background:rgba(0,0,0,.5);color:#fff;padding:14px 16px 16px}
+.ta-in{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:8px 20px;align-items:end}
+.ta-k{font:600 11.5px/1 Jost,sans-serif;letter-spacing:.26em;text-transform:uppercase;color:#c89d64}
+.ta-t{font:500 clamp(24px,4.6vw,44px)/1.05 "Playfair Display",Times,serif;text-transform:uppercase;letter-spacing:.05em;margin:6px 0 4px;color:#fff}
+.ta-f{font-size:14.5px;line-height:1.45;color:rgba(255,255,255,.88);margin:0}
+.ta-btns{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.ta-b{min-height:44px;padding:0 16px;border:1px solid rgba(255,255,255,.8);background:transparent;color:#fff;font:600 12px/1 Jost,sans-serif;letter-spacing:.18em;text-transform:uppercase;border-radius:2px;cursor:pointer;display:inline-flex;align-items:center;text-decoration:none}
+.ta-b:hover{background:#fff;color:#2b2118}
+.ta-b.g{background:#c89d64;border-color:#c89d64;color:#2b2118}
+.ta-b[hidden]{display:none}
+.ta-dots{position:absolute;top:78px;left:50%;transform:translateX(-50%);z-index:6;display:flex;gap:6px}
+.ta-dots button{width:9px;height:9px;border-radius:50%;border:0;padding:0;background:rgba(74,63,53,.3);cursor:pointer;transition:all .3s}
+.ta-dots button.seen{background:rgba(169,127,71,.55)}
+.ta-dots button.on{background:#c89d64;width:26px;border-radius:5px}
+.ta-card{position:absolute;z-index:7;left:50%;bottom:calc(var(--bh,120px) + 12px);transform:translate(-50%,20px);opacity:0;pointer-events:none;width:min(92vw,420px);background:#f8f4ec;border-top:3px solid #c89d64;box-shadow:0 18px 40px rgba(43,33,24,.3);display:flex;gap:14px;padding:14px;transition:all .35s cubic-bezier(.2,.8,.2,1)}
+.ta-card.on{opacity:1;transform:translate(-50%,0);pointer-events:auto}
+.ta-card img{width:84px;height:84px;object-fit:cover;flex:none;background:#e4dccf}
+.ta-card .cc{font:700 12px/1 Jost,sans-serif;letter-spacing:.2em;color:#a97f47}
+.ta-card .cn{font:500 19px/1.2 "Playfair Display",Times,serif;color:#4a3f35;margin:5px 0 3px}
+.ta-card .cb{font-size:13.5px;color:#6b5d50;line-height:1.4}
+.ta-x{position:absolute;right:6px;top:4px;border:0;background:none;font-size:22px;color:#6b5d50;cursor:pointer}
+.ta-sheet{position:absolute;z-index:8;left:0;right:0;bottom:0;max-height:72%;overflow:auto;background:#f8f4ec;padding:22px 18px 26px;transform:translateY(100%);transition:transform .45s cubic-bezier(.2,.8,.2,1);border-top:3px solid #c89d64}
+.ta-sheet.on{transform:none}
+.ta-sheet h4{font:500 24px/1.1 "Playfair Display",Times,serif;text-transform:uppercase;letter-spacing:.05em;color:#4a3f35;margin:0 0 4px}
+.ta-sheet p{margin:0 0 14px;font-size:14px}
+.ta-chips{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:8px}
+.ta-chip{display:flex;gap:10px;align-items:center;background:#fff;border:1px solid #e4dccf;padding:8px;border-radius:2px}
+.ta-chip i{font-style:normal;flex:none;min-width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:#efe6d8 center/cover;color:#4a3f35;font:700 11px Jost,sans-serif;padding:0 4px}
+.ta-chip b{display:block;font:600 14px/1.25 Jost,sans-serif;color:#4a3f35}
+.ta-chip span{font-size:12.5px;color:#8c7d6e}
+.ta-hint{position:absolute;z-index:6;left:50%;top:104px;transform:translateX(-50%);background:rgba(0,0,0,.55);color:#fff;font:500 12px/1.3 Jost,sans-serif;letter-spacing:.12em;text-transform:uppercase;padding:9px 14px;border-radius:2px;text-align:center;transition:opacity .6s;max-width:90vw}
+.tour-app.walking .ta-go,.tour-app.walking .ta-m,.tour-app.walking .ta-card{opacity:0!important;pointer-events:none}
+@media (max-width:767px){.ta-in{grid-template-columns:1fr}.ta-btns{justify-content:flex-start}.ta-f{font-size:13.5px}.ta-go .l{font-size:11px;padding:8px 10px}.ta-dots{top:74px}}
+</style>
+<div class="tour-app" id="tour">
+ <div class="ta-scenes"></div>
+ <video class="ta-walk" muted playsinline webkit-playsinline preload="auto"></video><video class="ta-walk" muted playsinline webkit-playsinline preload="auto"></video>
+ <div class="ta-top"></div>
+ <div class="ta-dots" role="tablist" aria-label="Rooms"></div>
+ <div class="ta-hint">Tap the gold point to walk on. Tap a ring to see the material.</div>
+ <div class="ta-card" role="dialog" aria-live="polite"><img alt=""><div><div class="cc"></div><div class="cn"></div><div class="cb"></div></div><button class="ta-x" aria-label="Close">&times;</button></div>
+ <div class="ta-sheet" role="dialog" aria-label="Materials in this room"><button class="ta-x" aria-label="Close">&times;</button><h4></h4><p>Finishes and fittings from the material schedule.</p><div class="ta-chips"></div></div>
+ <div class="ta-band"><div class="ta-in">
+  <div><div class="ta-k"><span class="ta-n">1</span> / <span class="ta-tot"></span> &middot; <span class="ta-fl"></span></div><h2 class="ta-t"></h2><p class="ta-f"></p></div>
+  <div class="ta-btns">
+   <button class="ta-b ta-mat" type="button">Materials</button>
+   <a class="ta-b ta-plan" href="/plan">Plan</a>
+   <button class="ta-b ta-prev" type="button" aria-label="Previous room">&#8592;</button>
+   <button class="ta-b g ta-next" type="button">Next room &#8594;</button>
+   <a class="ta-b g ta-buy" hidden href="https://wa.me/6281228636230?text=Hi%2C%20I%27m%20interested%20in%20buying%20a%20Psusennes%20villa%20in%20Munggu.%20Could%20you%20send%20me%20the%20details%3F" target="_blank" rel="noopener">Buy</a>
+   <a class="ta-b ta-rent" hidden href="https://wa.me/6281228636230?text=Hi%2C%20I%27m%20interested%20in%20renting%20a%20Psusennes%20villa%20in%20Munggu.%20Could%20you%20share%20your%20rental%20rates%3F" target="_blank" rel="noopener">Rent</a>
+  </div></div></div>
+</div>
+<script>
+(function(){
+"use strict";
+var D={"S":[{"id":"facade","n":"Front facade","fl":"Ground","f":["Bukit stone, bangkirai timber cladding and timber grill screens on the street side."],"p":"00_front_facade","W":5016,"H":2823,"fx":58,"m":[["C2",68.7,47.2],["F2",68.7,84.6],["W11",61.9,63.4],["W5",48.3,66.5],["W6",46.6,42.3],["W7",82.3,63.5],["W8",68.7,63.5],["TG",30,22],["PD",57,40]],"c":["W5","W11","W6","W7","W8","C2","F2","TG"],"pw":["f01_facade_entrance"],"h":[57.8,70,"To the front door"]},{"id":"entrance","n":"Entrance","fl":"Ground","f":["Three steps up to the tall timber pivot door, beside a fluted wall and Bukit stone."],"p":"01_entrance","W":4608,"H":3072,"fx":45,"m":[["C2",58.5,20.6],["F2",58.5,74.1],["W11",51.2,48.1],["W5",36.7,48.6],["W6",51.7,8.6],["W7",90.8,46.1],["W8",63.6,43.5],["PD",45,33]],"c":["W5","W8","W11","W7","W6","C2","F2","PD"],"pw":[],"h":[45,47,"Powder room"]},{"id":"powder","n":"Powder room","fl":"Ground","f":["Guest powder room with WC and vanity: dark marble slab, cement tile and polished terrazzo.","Image approximated from the plans and material schedule."],"p":"rooms/powder","W":1520,"H":2688,"fx":50,"m":[["C1",48,6],["FW",17,22],["W4",56,30],["LED",62,45],["W2",44,47],["W1",56,58],["TSP 3104",28,63],["CW635PJ",37,70],["BAP 4201GM",57,63],["FDBZ 1811GM",57,77],["FCBZ 2135GM",85,56],["MI",90,36],["PD",8,55],["F1",45,90]],"c":["W4","W2","W1","F1","C1","BAP 4201GM","FW","PD","GPO","TSP 3104","CW635PJ","FCBZ 2135GM","FDBZ 1811GM","MI","LED","EX"],"pw":["f30_drygarden_kitchen"],"v":1,"mw":[["C1",50,4],["PD",8,50],["FW",30,10],["W4",40,30],["W2",55,44],["LED",68,44],["W1",45,62],["TSP 3104",40,64],["CW635PJ",48,76],["BAP 4201GM",54,68],["FDBZ 1811GM",53,84],["FCBZ 2135GM",75,55],["MI",88,30],["F1",30,90]],"h":[30,64,"To the kitchen"],"hw":[10,60]},{"id":"kitchen","n":"Kitchen","fl":"Ground","f":["Marble island kitchen with timber columns and a Bukit stone wall."],"p":"02_kitchen_dining_living","W":5016,"H":2823,"fx":24,"m":[["C1",48.6,12.9],["F1",52.6,89.4],["W11",62.9,47.1],["W5",75.6,33.3],["MI",31,41]],"c":["F1","C1","W5","W11","W9","MI"],"pw":["f03_living_kitchen"],"h":[22,64,"To the dining table"]},{"id":"dining","n":"Dining","fl":"Ground","f":["A long dining table facing the rice fields through tall glass."],"p":"05_kitchen_dining_living","W":5016,"H":2823,"fx":38,"m":[["C1",34.2,10.0],["W11",32.5,52.6],["MI",70,41],["SD",88,45]],"c":["F1","C1","W5","W11","MI","SD"],"pw":["f04_kitchen_terrace"],"h":[36,60,"Out to the terrace"]},{"id":"terrace","n":"Terrace lounge","fl":"Ground","f":["A covered lounge on bangkirai decking, through sliding doors from the living room."],"p":"06_outdoor_living","W":5016,"H":2823,"fx":80,"m":[["C2",75.6,5.3],["F4",78.7,88.9],["W12",38.5,93.4],["W5",60.0,32.3],["W6",62.9,46.1]],"c":["F4","F1","W5","W6","W11","W12","C2","FW","SD"],"pw":["f05_terrace_pool"],"h":[88,46,"To the pool"]},{"id":"pool","n":"Pool","fl":"Ground","f":["Private pool, 1.4 m deep, along the whole west side."],"p":"07_pool_sun_deck","W":5016,"H":2823,"fx":25,"m":[["C2",45.5,5.3],["F4",41.2,79.2],["W11",35.7,39.9],["W12",62.7,72.6],["W5",54.3,41.0]],"c":["F4","F5","W12","W5","W6","W11","F1","C1","C2","FW"],"pw":["f06_pool_living"],"h":[22,52,"Back inside"]},{"id":"living","n":"Living room","fl":"Ground","f":["The living room, open to the dining area, with the stair and its fluted wall beside it."],"p":"04_kitchen_dining_living","W":5016,"H":2823,"fx":45,"m":[["C1",58.4,4.2],["F1",47.1,81.7],["W11",40.0,49.7],["W5",5.8,32.3],["W8",32.8,19.1],["W9",47.4,34.8],["MI",88,41]],"c":["F1","C1","W5","W8","W9","W11","MI","SD"],"pw":[],"h":[47,64,"Upstairs to the master bedroom"]},{"id":"master","n":"Master bedroom","fl":"First","f":["The largest bedroom, with a lounge corner and sliding doors to a private balcony."],"p":"08_master_bedroom","W":5016,"H":2823,"fx":40,"m":[["SD",86,40],["MR",93,57]],"c":["F1","W8","W9","C1","PD","SD"],"pw":["p08_master_ensuite"],"h":[36,48,"Master ensuite"]},{"id":"master-ensuite","n":"Master ensuite","fl":"First","f":["Polished terrazzo bathtub, two showers, a marble vanity and fishbone mosaic."],"p":"11_master_ensuite","W":5016,"H":2823,"fx":80,"m":[["FCP 1806T",45,62]],"c":["W4","W3","W2","F1","C1","FCP 1806T","FCBZ 2127GM","BAP 3504GM","BAP 4201GM","GS","SW","PD","GPO","TSP 3104","CW635PJ","FCBZ 2135GM","FDBZ 1811GM","MI","LED","EX"],"pw":[],"h":[86,52,"To Bedroom 1"]},{"id":"bedroom-1","n":"Bedroom 1","fl":"First","f":["Ensuite bedroom with a skylight, a built-in desk behind a timber grill, and wardrobes."],"p":"12_bedroom_1","W":5016,"H":2823,"fx":16,"m":[["C1",61.5,6.4],["F1",21.1,86.8],["W8",52.6,34.4],["W9",34.2,40.9],["SK",67,12],["TG",30,72],["DK",45,60]],"c":["F1","W8","W9","C1","TG","SK","PD","DK"],"pw":["f15_bedroom1_ensuite1"],"h":[12,52,"Its ensuite"]},{"id":"ensuite-1","n":"Ensuite 1","fl":"First","f":["Walk-in shower in fishbone mosaic, marble vanity and a glass wall to a small garden."],"p":"14_ensuite_1","W":5016,"H":2823,"fx":58,"m":[["W2",41.4,62.8],["W3",62.7,35.9],["W7",80.1,29.7],["GS",61,30],["MI",26,30]],"c":["W3","W2","W4","W7","F1","C1","FCBZ 2127GM","BAP 4201GM","GS","PD","GPO","TSP 3104","CW635PJ","FCBZ 2135GM","FDBZ 1811GM","MI","LED","EX"],"pw":[],"h":[62,52,"To Bedroom 2"]},{"id":"bedroom-2","n":"Bedroom 2, bunk room","fl":"First","f":["Ensuite bunk room with a skylight, a built-in desk and a timber grill window."],"p":"15_bedroom_2_bunkbed","W":5016,"H":2823,"fx":40,"m":[["C1",41.4,4.2],["F1",54.4,94.7],["W8",24.2,29.7],["W9",41.6,15.5],["SK",12,10],["TG",8,72],["DK",28,52]],"c":["F1","W8","W9","C1","TG","SK","PD","DK"],"pw":[],"h":[34,30,"Up to the rooftop"]},{"id":"rooftop","n":"Rooftop lounge","fl":"Roof","f":["Lounge sofas under a timber pergola with clear glass, with rice-field and ocean views."],"p":"16_rooftop","W":5016,"H":2823,"fx":72,"m":[["C2",60.9,16.5],["F2",47.0,86.2],["W5",48.2,47.5],["GP",40,8]],"c":["F2","W5","W6","W7","C2","GP","PB"],"pw":["f22_rooftop_dining"],"h":[80,70,"Rooftop dining"]},{"id":"rooftop-dining","n":"Rooftop dining","fl":"Roof","f":["A long dining table under the pergola, made for long dinners."],"p":"17_rooftop","W":5016,"H":2823,"fx":75,"m":[["C2",60.9,16.5],["F2",75.1,81.7],["W5",18.7,30.4],["W6",87.2,61.8],["W7",76.7,39.8],["BBQ",72,52]],"c":["F2","W5","W6","W7","C2","GP"],"pw":[],"h":[78,62,"See the villa from the fields"]},{"id":"rear","n":"Rear facade","fl":"Ground","f":["Each villa opens onto its own pool and the rice fields."],"p":"18_back_facade","W":5016,"H":2823,"fx":50,"m":[["C1",35.7,21.8],["C2",42.0,16.5],["F4",34.0,74.8],["W11",57.4,62.3],["W5",20.7,60.3],["W6",51.1,48.0],["W7",80.6,26.3],["MR",55,36],["SD",60,62]],"c":["W5","W11","W6","W7","F4","W12","C1","C2","MR","SD"],"pw":[]}],"M":{"W1":["Cement tile","","Powder room, behind the WC and under the vanity","Finish","W1"],"W2":["Marble slab","","Vanities, niches, backsplashes and wainscot in every bathroom","Finish","W2"],"W3":["Cream marble mosaic, fishbone","Stile","Shower walls in the ensuites","Finish","W3"],"W4":["Polished terrazzo","","Bathroom walls and the master bathtub","Finish","W4"],"W5":["Random-cut Bukit stone","","Facade, feature walls, terrace, pool area and rooftop","Finish","W5"],"W6":["Smooth exterior wall paint","","Exterior walls","Finish","W6"],"W7":["Textured wall, kamprot","","Exterior and garden walls","Finish","W7"],"W8":["Fluted wall texture","","Entrance, stair wall and bedroom headboard walls","Finish","W8"],"W9":["Smooth interior paint, stucco technique","","Interior walls","Finish","W9"],"W10":["Textured interior wall paint","","Interior accent walls, as listed in the schedule legend","Finish","W10"],"W11":["Solid bangkirai timber plank","","Cladding, columns, pivot doors and stair soffit","Finish","W11"],"W12":["Green tawon stone","","Pool walls","Finish","W12"],"F1":["Random-size marble, French pattern","","Main interior floor","Finish","F1"],"F2":["Crazy random-cut marble","","Carport, entrance and rooftop","Finish","F2"],"F3":["Loose pebbles","","Dry garden and garden beds","Finish","F3"],"F4":["Solid bangkirai timber decking","","Terrace, pool deck, sun bed deck and balcony","Finish","F4"],"F5":["Green tawon stone","","Pool edge and surround","Finish","F5"],"F6":["600x600 local marble","","Stair treads","Finish","F6"],"C1":["Painted 9 mm gypsum board ceiling","","Interior ceilings","Finish","C1"],"C2":["Solid timber ceiling","","Carport, terrace, balcony and rooftop pergola","Finish","C2"],"TSP 3104":["Jet shower, gunmetal","Paloma TSP 3104 Gunmetal","Powder room and every ensuite","Fitting","JS"],"CW635PJ":["Toilet, S-trap","Toto CW635PJ","Powder room and every ensuite","Fitting","WC"],"FCBZ 2135GM":["Basin tap","Brezio FCBZ 2135GM","Powder room and every ensuite","Fitting","TAP"],"FCBZ 2127GM":["Shower set","Brezio FCBZ 2127GM","Every ensuite","Fitting","SH"],"FDBZ 1811GM":["Floor drain","Brezio FDBZ 1811GM","Powder room and every ensuite","Fitting","DR"],"BAP 4201GM":["Tissue holder","Paloma BAP 4201GM","Powder room and every ensuite","Fitting","TH"],"BAP 3504GM":["Robe hook, at 1.5 m","Paloma BAP 3504GM","Master ensuite","Fitting","RH"],"FCP 1806T":["Bathtub faucet","Paloma FCP 1806T","Master ensuite","Fitting","BF"],"MI":["Frameless mirror","","Above every vanity; living and dining","Fitting","MI"],"LED":["LED strip, 3500K","","Niches and mirrors in every bathroom; foyer shelves","Fitting","LED"],"EX":["Exhaust fan","","Ceiling of every bathroom","Fitting","EX"],"GPO":["Switch and power point","","Bathrooms, at 1000 and 1200 mm","Fitting","GPO"],"GS":["Clear tempered glass screen","","Showers in the ensuites","Fitting","GS"],"PD":["Pivot door, solid timber","","Front door, powder room, every bedroom and ensuite","Opening","PD"],"SD":["Sliding glass door","","Living to terrace, dry garden and pool; master bedroom to balcony","Opening","SD"],"FG":["Folding glass door","","Kitchen to the garden court","Opening","FG"],"FW":["Fixed glass window","","Powder room, terrace, kitchen side garden, pool area","Opening","FW"],"SW":["Sliding window","","Ensuite 2 and the master ensuite","Opening","SW"],"TG":["Timber grill with clear tempered glass","","Facade and bedroom windows","Opening","TG"],"SK":["Skylight","","Bedroom 1 and Bedroom 2","Opening","SK"],"GR":["Frameless tempered glass railing","","Edge of the stair void","Opening","GR"],"MR":["Metal railing","","Master balcony","Opening","MR"],"GP":["Clear tempered glass on timber pergola","","Rooftop","Opening","GP"],"DK":["Built-in timber desk","","Foyer, Bedroom 1 and Bedroom 2","Feature","DK"],"BBQ":["Built-in BBQ","","Rooftop","Feature","BBQ"],"SNK":["Outdoor sink","","Rooftop","Feature","SNK"],"PB":["Planter box","","Rooftop edges and ensuite 2","Feature","PB"]},"SW":{"W2":"https://res.cloudinary.com/vhtu15vv/image/upload/c_crop,w_900,h_900,x_1626,y_1322/c_scale,w_240/f_jpg,q_auto/psusennes/originals/14_ensuite_1.jpg","W3":"https://res.cloudinary.com/vhtu15vv/image/upload/c_crop,w_900,h_900,x_2695,y_563/c_scale,w_240/f_jpg,q_auto/psusennes/originals/14_ensuite_1.jpg","W4":"https://res.cloudinary.com/vhtu15vv/image/upload/c_crop,w_900,h_900,x_944,y_602/c_scale,w_240/f_jpg,q_auto/psusennes/originals/10_master_ensuite.jpg","W5":"https://res.cloudinary.com/vhtu15vv/image/upload/c_crop,w_900,h_900,x_3342,y_490/c_scale,w_240/f_jpg,q_auto/psusennes/originals/02_kitchen_dining_living.jpg","W6":"https://res.cloudinary.com/vhtu15vv/image/upload/c_crop,w_900,h_900,x_1887,y_744/c_scale,w_240/f_jpg,q_auto/psusennes/originals/00_front_facade.jpg","W7":"https://res.cloudinary.com/vhtu15vv/image/upload/c_crop,w_900,h_900,x_3678,y_1342/c_scale,w_240/f_jpg,q_auto/psusennes/originals/00_front_facade.jpg","W8":"https://res.cloudinary.com/vhtu15vv/image/upload/c_crop,w_900,h_900,x_1195,y_89/c_scale,w_240/f_jpg,q_auto/psusennes/originals/04_kitchen_dining_living.jpg","W9":"https://res.cloudinary.com/vhtu15vv/image/upload/c_crop,w_900,h_900,x_1927,y_532/c_scale,w_240/f_jpg,q_auto/psusennes/originals/04_kitchen_dining_living.jpg","W11":"https://res.cloudinary.com/vhtu15vv/image/upload/c_crop,w_900,h_900,x_2705,y_879/c_scale,w_240/f_jpg,q_auto/psusennes/originals/02_kitchen_dining_living.jpg","W12":"https://res.cloudinary.com/vhtu15vv/image/upload/c_crop,w_900,h_900,x_1481,y_1923/c_scale,w_240/f_jpg,q_auto/psusennes/originals/06_outdoor_living.jpg","F1":"https://res.cloudinary.com/vhtu15vv/image/upload/c_crop,w_900,h_900,x_2188,y_1923/c_scale,w_240/f_jpg,q_auto/psusennes/originals/02_kitchen_dining_living.jpg","F2":"https://res.cloudinary.com/vhtu15vv/image/upload/c_crop,w_900,h_900,x_2995,y_1923/c_scale,w_240/f_jpg,q_auto/psusennes/originals/00_front_facade.jpg","F4":"https://res.cloudinary.com/vhtu15vv/image/upload/c_crop,w_900,h_900,x_3497,y_1923/c_scale,w_240/f_jpg,q_auto/psusennes/originals/06_outdoor_living.jpg","C1":"https://res.cloudinary.com/vhtu15vv/image/upload/c_crop,w_900,h_900,x_1987,y_0/c_scale,w_240/f_jpg,q_auto/psusennes/originals/02_kitchen_dining_living.jpg","C2":"https://res.cloudinary.com/vhtu15vv/image/upload/c_crop,w_900,h_900,x_2995,y_882/c_scale,w_240/f_jpg,q_auto/psusennes/originals/00_front_facade.jpg"},"A":{"stairs":"living","outdoor":"terrace","bedroom-3":"bedroom-2","carport":"facade","entrance-hall":"entrance","dry-garden":"powder","garden":"dining","side-garden":"dining","sun-bed":"pool","stair":"living","foyer":"master","void":"living","balcony":"master","ensuite-1-garden":"ensuite-1","ensuite-2":"bedroom-2","upper-stair":"bedroom-2","rooftop-bbq":"rooftop-dining"},"L":{"f30_drygarden_kitchen":"film/l30_drygarden_kitchen","f03_living_kitchen":"tour/t03_living_kitchen","f04_kitchen_terrace":"tour/t04_kitchen_outdoor","f05_terrace_pool":"tour/t05_outdoor_pool","f22_rooftop_dining":"tour/t13_rooftop_dining","f01_facade_entrance":"tour/t01_facade_entrance","f06_pool_living":"tour/t06_pool_stairs","p08_master_ensuite":"tour/t08_master_ensuite","f15_bedroom1_ensuite1":"tour/t10_bedroom2_ensuite"}};
+var S=D.S,root=document.getElementById('tour');if(!root)return;
+var CL='https://res.cloudinary.com/vhtu15vv/',wrap=root.querySelector('.ta-scenes'),walks=root.querySelectorAll('.ta-walk'),walk=walks[0],band=root.querySelector('.ta-band'),
+card=root.querySelector('.ta-card'),sheet=root.querySelector('.ta-sheet'),dotsEl=root.querySelector('.ta-dots'),hint=root.querySelector('.ta-hint'),
+$=function(c){return root.querySelector(c)},reduced=matchMedia('(prefers-reduced-motion:reduce)').matches;
+var cur=-1,busy=false,seen={},P=portrait();
+function portrait(){return root.clientWidth/Math.max(1,root.clientHeight)<.85}
+/* portrait screens get a 9:16 crop around the room's focal point (fx); hotspot x is remapped into the crop */
+function crop(s){var cw=Math.round(s.H*9/16),x0=Math.round(Math.min(Math.max(s.fx/100*s.W-cw/2,0),s.W-cw));return{cw:cw,x0:x0}}
+function px(s,x){if(s.v)return x;if(!P)return x;var c=crop(s);return(x/100*s.W-c.x0)/c.cw*100}
+function pth(s){return s.p.indexOf('rooms/')===0?'psusennes/'+s.p:'psusennes/originals/'+s.p}
+function src(s){if(s.v)return CL+'image/upload/'+(P?'c_limit,w_1200/f_auto,q_auto:good/'+pth(s):'c_fill,ar_16:9,g_auto,w_'+(innerWidth*Math.min(devicePixelRatio||1,2)>2000?2560:1920)+'/f_auto,q_auto:good/'+pth(s)+'-wide');
+if(P){var c=crop(s);return CL+'image/upload/c_crop,w_'+c.cw+',h_'+s.H+',x_'+c.x0+',y_0/c_limit,w_1200/f_auto,q_auto:good/'+pth(s)}
+return CL+'image/upload/f_auto,q_auto:good,c_fill,ar_16:9,g_auto,w_'+(innerWidth*Math.min(devicePixelRatio||1,2)>2000?2560:1920)+'/'+pth(s)}
+/* walk clips: phones play the native 9:16 film chain (s.pw, psusennes/film) that follows the real plan;
+   wider screens play the 16:9 transition (s.w, psusennes/tour) */
+function wlist(s){return(s.pw||[]).map(function(id){var L=D.L[id];if(!P&&L)return{u:CL+'video/upload/w_1920,c_limit/vc_h264,q_auto:good,br_5m,ac_none/psusennes/'+L+'.mp4',pt:0};
+return P?{u:CL+'video/upload/w_720,c_limit/vc_h264,q_auto:good,br_3m,ac_none/psusennes/film/'+id+'.mp4',pt:0}:null}).filter(Boolean)}
+function wurl(s){var l=wlist(s);return l.length?l[0].u:''}
+/* build scenes */
+var sc=S.map(function(s,i){var el=document.createElement('div');el.className='ta-scene';el.setAttribute('aria-hidden','true');
+var st=document.createElement('div');st.className='ta-stage';var im=document.createElement('img');im.alt=s.n+', Psusennes villa design';im.decoding='async';st.appendChild(im);
+var ms=((!P&&s.v&&s.mw)?s.mw:(s.m||[])).map(function(m){var b=document.createElement('button');b.type='button';b.className='ta-m';b.textContent=(D.M[m[0]]||[])[4]||m[0];b.dataset.x=m[1];b.style.top=m[2]+'%';
+b.setAttribute('aria-label','Material '+m[0]+': '+(D.M[m[0]]||[''])[0]);b.addEventListener('click',function(e){e.stopPropagation();openCard(m[0],b)});st.appendChild(b);return b});
+var go=null;if(s.h){go=document.createElement('button');go.type='button';go.className='ta-go';go.innerHTML='<span class="d"></span><span class="l"></span>';go.querySelector('.l').textContent=s.h[2];
+go.setAttribute('aria-label',s.h[2]+': go to '+S[i+1].n);go.addEventListener('click',function(e){e.stopPropagation();nav(i+1,true)});st.appendChild(go)}
+el.appendChild(st);wrap.appendChild(el);return{el:el,st:st,img:im,ms:ms,go:go}});
+function load(i){if(i<0||i>=S.length)return;var u=src(S[i]);if(sc[i].img.getAttribute('src')!==u)sc[i].img.src=u}
+/* cover-fit the stage, keep the focal point (fx) in view */
+function lay(i){var s=S[i],o=sc[i],vw=root.clientWidth,vh=root.clientHeight,a=P?9/16:16/9,w,h,l,t,fx=(P||s.v)?50:s.fx;
+if(vw/vh>a){w=vw;h=vw/a;l=0;t=(vh-h)/2}else{h=vh;w=vh*a;t=0;l=Math.min(0,Math.max(vw-w,vw/2-fx/100*w))}
+var st=o.st.style;st.width=w+'px';st.height=h+'px';st.left=l+'px';st.top=t+'px';
+var bh=band.offsetHeight;root.style.setProperty('--bh',bh+'px');
+o.ms.forEach(function(b){var x=px(s,+b.dataset.x),sx=l+x/100*w,sy=t+parseFloat(b.style.top)/100*h;b.style.left=x+'%';b.style.display=(sx<18||sx>vw-18||sy<120||sy>vh-bh-14)?'none':''});
+if(o.go){var hx=P&&s.ph?s.ph[0]:(!P&&s.hw?s.hw[0]:px(s,s.h[0])),hy=P&&s.ph?s.ph[1]:(!P&&s.hw?s.hw[1]:s.h[1]),gx=l+hx/100*w,gy=t+hy/100*h;
+gy=Math.min(Math.max(gy,140),vh-bh-40);gx=Math.min(Math.max(gx,40),vw-160);o.go.style.left=((gx-l)/w*100)+'%';o.go.style.top=((gy-t)/h*100)+'%'}}
+/* room dots */
+var dots=S.map(function(s,i){var b=document.createElement('button');b.type='button';b.title=s.n;b.setAttribute('aria-label',(i+1)+'. '+s.n);b.addEventListener('click',function(){nav(i,false)});dotsEl.appendChild(b);return b});
+$('.ta-tot').textContent=S.length;
+function band_(i){var s=S[i];$('.ta-n').textContent=i+1;$('.ta-fl').textContent=s.fl==='Roof'?'Rooftop':s.fl+' floor';$('.ta-t').textContent=s.n;$('.ta-f').textContent=s.f.join(' ');
+$('.ta-plan').href='/plan#'+s.id;$('.ta-prev').hidden=i===0;var last=i===S.length-1;$('.ta-next').hidden=last;$('.ta-buy').hidden=!last;$('.ta-rent').hidden=!last;
+dots.forEach(function(d,n){d.classList.toggle('on',n===i);d.classList.toggle('seen',!!seen[n])});document.title=s.n+' | Villa Tour | Psusennes Villas'}
+function set(i){closeAll();load(i);sc.forEach(function(o,n){o.el.classList.toggle('on',n===i);o.el.setAttribute('aria-hidden',n===i?'false':'true')});
+seen[i]=1;cur=i;band_(i);lay(i);load(i+1);preW()}
+function preW(){var s=S[cur];if(!reduced&&s){var u=wurl(s);if(u&&walk.getAttribute('src')!==u){walk.src=u;try{walk.load()}catch(e){}}}}
+/* walk clip(s) between rooms; a chain plays back to back on two alternating videos; falls back to a crossfade */
+function play(from,to){var L=wlist(S[from]);if(!L.length||reduced)return set(to);busy=true;root.classList.add('walking');load(to);
+var k=0,done=false,t1,A=walk,B=walks[1];
+var fin=function(){if(done)return;done=true;clearTimeout(t1);set(to);setTimeout(function(){walks.forEach(function(v){v.classList.remove('on');v.onplaying=v.onended=v.onerror=null});walk=A;root.classList.remove('walking');busy=false},120)};
+function arm(v){clearTimeout(t1);t1=setTimeout(fin,8000);var o=v===A?B:A;
+ v.onplaying=function(){clearTimeout(t1);v.classList.add('on');o.classList.remove('on');t1=setTimeout(fin,((v.duration||8)+2)*1000);
+  if(k+1<L.length&&o.getAttribute('src')!==L[k+1].u){o.src=L[k+1].u;o.classList.toggle('pt',!!L[k+1].pt);try{o.load()}catch(e){}}};
+ v.onended=next;v.onerror=next}
+function next(){k++;if(k>=L.length)return fin();var v=(k%2)?B:A;if(v.getAttribute('src')!==L[k].u)v.src=L[k].u;v.classList.toggle('pt',!!L[k].pt);try{v.currentTime=0}catch(e){}arm(v);var p=v.play();if(p&&p.catch)p.catch(fin)}
+if(A.getAttribute('src')!==L[0].u)A.src=L[0].u;A.classList.toggle('pt',!!L[0].pt);try{A.currentTime=0}catch(e){}arm(A);
+var p=A.play();if(p&&p.catch)p.catch(fin)}
+function idx(){var id=decodeURIComponent(location.hash.slice(1));id=D.A[id]||id;for(var n=0;n<S.length;n++)if(S[n].id===id)return n;return-1}
+var pendingWalk=false;
+function nav(i,w){if(i<0||i>=S.length||i===cur||busy)return;pendingWalk=w;if(idx()===i)apply();else location.hash=S[i].id}
+function apply(){var i=idx();if(i<0)i=0;if(i===cur)return;var w=pendingWalk&&i===cur+1;pendingWalk=false;if(w)play(cur,i);else set(i);hint.style.opacity=cur>0?0:1}
+addEventListener('hashchange',apply);
+/* material card + sheet */
+function sw(c){return D.SW[c]||''}
+function openCard(c,b){var m=D.M[c]||[c,'',''];sheet.classList.remove('on');root.querySelectorAll('.ta-m.sel').forEach(function(x){x.classList.remove('sel')});b&&b.classList.add('sel');
+var im=card.querySelector('img');im.style.display=sw(c)?'':'none';if(sw(c))im.src=sw(c);var kd=m[3]||'';card.querySelector('.cc').textContent=kd==='Finish'?'CODE '+c:kd==='Fitting'?(m[1]?'MODEL '+c:'FITTING'):kd==='Opening'?'OPENING':'FEATURE';
+card.querySelector('.cn').textContent=m[0];card.querySelector('.cb').textContent=[m[1],m[2]].filter(Boolean).join(' · ');card.classList.add('on');hint.style.opacity=0}
+function openSheet(){var s=S[cur];closeAll();sheet.querySelector('h4').textContent=s.n;var box=sheet.querySelector('.ta-chips');box.innerHTML='';
+s.c.forEach(function(c){var m=D.M[c]||[c,'',''],d=document.createElement('div');d.className='ta-chip';var i=document.createElement('i');if(sw(c)){i.style.backgroundImage='url('+sw(c)+')';i.style.color='#fff';i.style.textShadow='0 1px 3px #000'}i.textContent=/^[WFC]\d/.test(c)?c:'';
+var t=document.createElement('div');t.innerHTML='<b></b><span></span>';t.querySelector('b').textContent=(/^[WFC]\d/.test(c)?c+' ':'')+m[0];t.querySelector('span').textContent=m[1]||m[2];d.appendChild(i);d.appendChild(t);box.appendChild(d)});
+sheet.classList.add('on')}
+function closeAll(){card.classList.remove('on');sheet.classList.remove('on');root.querySelectorAll('.ta-m.sel').forEach(function(x){x.classList.remove('sel')})}
+root.querySelectorAll('.ta-x').forEach(function(b){b.addEventListener('click',closeAll)});
+$('.ta-mat').addEventListener('click',openSheet);
+$('.ta-next').addEventListener('click',function(){nav(cur+1,true)});$('.ta-prev').addEventListener('click',function(){nav(cur-1,false)});
+wrap.addEventListener('click',closeAll);
+document.addEventListener('keydown',function(e){if(e.key==='ArrowRight')nav(cur+1,true);else if(e.key==='ArrowLeft')nav(cur-1,false);else if(e.key==='Escape')closeAll()});
+var x0=null,y0;root.addEventListener('touchstart',function(e){x0=e.touches.length===1?e.touches[0].clientX:null;y0=e.touches[0].clientY},{passive:true});
+root.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0,dy=e.changedTouches[0].clientY-y0;x0=null;if(Math.abs(dx)>50&&Math.abs(dx)>Math.abs(dy)*1.3){dx<0?nav(cur+1,true):nav(cur-1,false)}});
+var rt;addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(function(){var p=portrait();if(p!==P){P=p;sc.forEach(function(o,n){if(o.img.getAttribute('src'))load(n)});walks.forEach(function(v){v.removeAttribute('src')});preW()}lay(cur)},150)});
+var st=idx();set(st<0?0:st);setTimeout(function(){hint.style.opacity=0},6000);
+})();
+</script>
+</section><section class="section-sand"><div class="wrap-narrow"><div class="reveal"><p class="eyebrow">Psusennes Villas, Munggu</p></div><div class="reveal"><span class="gold-line-c"></span></div><div class="reveal"><h1 class="h2-center">Walk through the villa</h1></div><div class="reveal"><p class="lede-center">From the front door to the rooftop, in the order you would walk it. Every ring shows a real finish from the designer&#x27;s material schedule: its code, its name and, for fittings, the brand and model. Off-plan price IDR 5.7B, IDR 6.2B after completion.</p></div><div class="reveal"><div class="cta-row"><a href="https://wa.me/6281228636230?text=Hi%2C%20I%27m%20interested%20in%20buying%20a%20Psusennes%20villa%20in%20Munggu.%20Could%20you%20send%20me%20the%20details%3F" target="_blank" rel="noopener" class="btn-gold">Buy</a><a href="https://wa.me/6281228636230?text=Hi%2C%20I%27m%20interested%20in%20renting%20a%20Psusennes%20villa%20in%20Munggu.%20Could%20you%20share%20your%20rental%20rates%3F" target="_blank" rel="noopener" class="btn-outline">Rent</a><a href="/plan" class="btn-outline">Floor plan</a></div></div></div></section>
+</main>
+<footer class="site-footer"><div class="footer-wrap"><div class="footer-col-wide"><p class="footer-brand">Psusennes Developments</p><p class="footer-text">A real estate development and marketing company in Bali. Property development, real estate marketing, villa rental management and property sales. Our first project, Psusennes Villas, is three villas of one design in Munggu.</p></div><div class="footer-col"><p class="footer-head">Explore</p><a href="/" class="footer-link">Home</a><a href="/tour" class="footer-link">Villa Tour</a><a href="/plan" class="footer-link">Floor Plan</a><a href="/villa" class="footer-link">The Villa</a><a href="/progress" class="footer-link">Progress</a><a href="/company" class="footer-link">Company</a><a href="/contact" class="footer-link">Contact</a></div><div class="footer-col"><p class="footer-head">Contact</p><a href="https://wa.me/6281228636230?text=Hi%20Psusennes%2C%20I%20have%20a%20question%20about%20your%20villas%20in%20Munggu." class="footer-link" target="_blank" rel="noopener">WhatsApp +62 812-2863-6230</a><a href="https://www.instagram.com/psusennes.villa" class="footer-link" target="_blank" rel="noopener">Instagram @psusennes.villa</a><a href="https://www.youtube.com/channel/UC8zkbWYtwOxuPODBVKF5MTQ" class="footer-link" target="_blank" rel="noopener">YouTube</a><a href="mailto:info@psues.com" class="footer-link">info@psues.com</a></div></div><div class="footer-legal"><p class="footer-note">Images show the villa design; the villas are under construction.</p><p class="footer-note">Prices in Indonesian Rupiah. Leasehold 30 years + renewal. &copy; <span data-year>2026</span> Psusennes Developments, Bali. <a href="/privacy">Privacy note</a></p></div></footer>
+<script src="/js/site.js" defer></script>
+<script src="/js/currency.js" defer></script>
+</body>
+</html>

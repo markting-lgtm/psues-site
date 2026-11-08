@@ -1,0 +1,228 @@
+/* Psusennes Villas, static build for psues.com. Class names match the former staging site so copy and embeds carry over unchanged. */
+:root{--ivory:#f8f4ec;--sand:#efe6d8;--stone:#e4dccf;--taupe:#6b5d50;--taupe-dark:#4a3f35;--gold:#c89d64;--gold-deep:#a97f47;--ink:#2b2118}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ivory);color:var(--taupe);font-family:Jost,"Helvetica Neue",Arial,sans-serif;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4,.serif{font-family:"Playfair Display","Times New Roman",Times,serif;font-weight:500;color:var(--taupe-dark);line-height:1.12}
+img,video{max-width:100%}
+a{color:var(--gold-deep)}
+p{margin:0 0 10px}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+[hidden]{display:none!important}
+.skip{position:absolute;left:-9999px;top:8px;z-index:200;background:var(--gold);color:var(--ink);padding:10px 14px;text-decoration:none}
+.skip:focus{left:8px}
+
+/* header */
+.site-header{z-index:100;transition:background-color .3s,box-shadow .3s;position:fixed;top:0;left:0;right:0}
+.header-wrap{justify-content:space-between;align-items:center;width:100%;max-width:1240px;height:68px;margin:0 auto;padding:0 20px;display:flex}
+.brand{align-items:center;display:flex;text-decoration:none}
+.brand img{width:140px;height:auto;display:block}
+.brand-text{display:none;font-family:"Playfair Display",Times,serif;font-size:22px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.brand.no-logo img{display:none}.brand.no-logo .brand-text{display:block}
+.nav{gap:26px;align-items:center;display:flex}
+.nav-link{color:#fff;letter-spacing:.22em;text-transform:uppercase;font-size:12.5px;font-weight:500;text-decoration:none}
+.nav-link:hover,.nav-link[aria-current]{color:var(--gold)}
+.nav-cta{color:var(--ink);letter-spacing:.2em;text-transform:uppercase;background-color:var(--gold);border-radius:2px;padding:11px 18px;font-size:12.5px;font-weight:600;text-decoration:none}
+.nav-cta:hover{background-color:#d6ae79}
+.menu-btn{gap:7px;cursor:pointer;flex-direction:column;justify-content:center;align-items:center;width:44px;height:44px;display:none;background:none;border:0;padding:0}
+.menu-bar{background-color:#fff;width:24px;height:2px;display:block}
+.mobile-nav{gap:6px;background-color:var(--ivory);flex-direction:column;padding:12px 24px 28px;display:none;box-shadow:0 12px 30px #2b21181f}
+.mobile-link{color:var(--taupe-dark);border-bottom:1px solid var(--stone);padding:8px 0;font-family:"Playfair Display",Times,serif;font-size:26px;text-decoration:none}
+.site-header.is-open .mobile-nav{display:flex}
+.site-header.is-scrolled,.site-header.is-open{background:rgba(248,244,236,.95);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:0 1px 0 rgba(107,93,80,.12)}
+.site-header.is-scrolled .nav-link,.on-light .nav-link,.site-header.is-open .nav-link{color:var(--taupe-dark)}
+.site-header.is-scrolled .menu-bar,.on-light .menu-bar,.site-header.is-open .menu-bar{background:var(--taupe-dark)}
+
+/* buttons */
+.btn-gold{color:var(--ink);letter-spacing:.2em;text-transform:uppercase;background-color:var(--gold);border-radius:2px;justify-content:center;align-items:center;min-height:52px;padding:14px 28px;font-size:14px;font-weight:600;text-decoration:none;transition:background-color .25s,transform .25s;display:inline-flex}
+.btn-gold:hover{background-color:#d6ae79;transform:translateY(-2px)}
+.btn-ghost{color:#fff;letter-spacing:.2em;text-transform:uppercase;border:1px solid #ffffffd9;border-radius:2px;justify-content:center;align-items:center;min-width:120px;min-height:52px;padding:0 26px;font-size:14px;font-weight:600;text-decoration:none;transition:background-color .25s,color .25s;display:inline-flex}
+.btn-ghost:hover{color:var(--ink);background-color:#fff}
+.btn-outline{color:var(--taupe-dark);letter-spacing:.2em;text-transform:uppercase;border:1px solid var(--gold);border-radius:2px;justify-content:center;align-items:center;min-height:52px;padding:0 28px;font-size:14px;font-weight:600;text-decoration:none;transition:background-color .25s;display:inline-flex}
+.btn-outline:hover{color:var(--ink);background-color:var(--gold)}
+.btn-enter{display:inline-flex}
+.cta-row{gap:12px;flex-wrap:wrap;justify-content:center;margin-top:28px;display:flex}
+
+/* home hero */
+.home-main,.page-main{display:block}
+.hero{background-color:var(--stone);height:100svh;min-height:560px;position:relative;overflow:hidden}
+.hero-media{position:absolute;inset:-6% 0}
+.hero-shade{background-image:linear-gradient(#00000073,#0000);height:160px;position:absolute;top:0;left:0;right:0}
+.hero-band{background-color:#00000080;padding:30px 20px 34px;position:absolute;bottom:0;left:0;right:0}
+.band-inner{text-align:center;flex-direction:column;align-items:center;max-width:980px;margin:0 auto;display:flex}
+.price-tag{color:var(--gold);letter-spacing:.3em;text-transform:uppercase;margin:0 0 12px;font-size:14px;font-weight:600}
+.gold-line{background-color:var(--gold);width:64px;height:1px;margin-bottom:14px;display:block}
+.band-title{color:#fff;letter-spacing:.06em;text-transform:uppercase;margin:0 0 22px;font-family:"Playfair Display",Times,serif;font-size:clamp(34px,7.4vw,84px);line-height:1.02}
+.hero-ctas{gap:12px;flex-wrap:wrap;justify-content:center;display:flex}
+.band-note{color:#ffffffd9;letter-spacing:.04em;margin:16px 0 0;font-size:14px}
+.facts{background-color:var(--gold);padding:14px 0;overflow:hidden}
+.facts-track{gap:22px;align-items:center;width:max-content;display:flex;animation:psMarquee 28s linear infinite}
+.fact{color:var(--ink);letter-spacing:.2em;text-transform:uppercase;white-space:nowrap;font-size:14px;font-weight:600}
+.fact-dot{color:#fff;font-size:10px}
+
+/* sections */
+.section-ivory{background-color:var(--ivory);padding:clamp(64px,10vw,120px) 20px}
+.section-sand{background-color:var(--sand);padding:clamp(64px,10vw,120px) 20px}
+.wrap{max-width:1180px;margin:0 auto}
+.wrap-narrow{text-align:center;max-width:760px;margin:0 auto}
+.wrap-mid{max-width:880px;margin:0 auto}
+.eyebrow{color:var(--gold-deep);letter-spacing:.28em;text-transform:uppercase;margin:0 0 14px;font-size:12.5px;font-weight:500}
+.eyebrow-c{color:var(--gold-deep);text-align:center;letter-spacing:.28em;text-transform:uppercase;margin:0 0 28px;font-size:12.5px;font-weight:500}
+.gold-line-c{background-color:var(--gold);width:56px;height:1px;margin:0 auto 20px;display:block}
+.h2-center{letter-spacing:.03em;text-transform:uppercase;margin:0 0 20px;font-size:clamp(32px,6vw,54px)}
+.lede-center{margin:0;font-size:19px}
+.film-section{background-color:var(--sand);position:relative}
+.cards{gap:16px;grid-template-columns:repeat(4,1fr);display:grid}
+.card{aspect-ratio:4/5;background-color:var(--stone);border-radius:2px;text-decoration:none;display:block;position:relative;overflow:hidden}
+.cimg{background-position:50%;background-size:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1);position:absolute;inset:0}
+.card:hover .cimg{transform:scale(1.07)}
+.card-band{gap:4px;background-color:#00000080;flex-direction:column;padding:18px;display:flex;position:absolute;bottom:0;left:0;right:0}
+.card-title{color:#fff;letter-spacing:.06em;text-transform:uppercase;font-family:"Playfair Display",Times,serif;font-size:22px}
+.card-sub{color:#ffffffd9;font-size:14px;line-height:1.45}
+.card-go{color:var(--gold);letter-spacing:.24em;text-transform:uppercase;margin-top:6px;font-size:12px;font-weight:600}
+.choice-grid{gap:20px;grid-template-columns:1fr 1fr;display:grid}
+.choice{background-color:#fff;border-top:3px solid var(--gold);flex-direction:column;align-items:flex-start;height:100%;padding:36px 32px;display:flex}
+.tag{color:var(--gold-deep);letter-spacing:.28em;text-transform:uppercase;margin:0 0 8px;font-size:12px;font-weight:600}
+.choice-title{letter-spacing:.04em;text-transform:uppercase;margin:0 0 10px;font-size:30px}
+.amount{color:var(--taupe-dark);margin:0 0 6px;font-family:"Playfair Display",Times,serif;font-size:28px}
+.amount-note{margin:0 0 24px;font-size:15px}
+
+/* page hero */
+.page-hero{background-color:var(--stone);height:72svh;min-height:460px;position:relative;overflow:hidden}
+.page-hero-img{position:absolute;inset:0;background-position:50%;background-size:cover}
+.page-band{text-align:center;background-color:#00000080;padding:26px 20px 30px;position:absolute;bottom:0;left:0;right:0}
+.page-title{color:#fff;letter-spacing:.06em;text-transform:uppercase;margin:0 0 8px;font-family:"Playfair Display",Times,serif;font-size:clamp(32px,6.4vw,72px);line-height:1.04}
+.page-sub{color:#ffffffe0;margin:0;font-size:16px}
+.tour-shell{position:relative}
+.plan-intro{padding-top:120px;padding-bottom:36px}
+.plan-shell{background-color:var(--ivory);padding-bottom:clamp(56px,8vw,96px)}
+
+/* progress */
+.steps{gap:14px;flex-direction:column;display:flex}
+.step{gap:22px;background-color:#fff;border-left:3px solid var(--gold);align-items:flex-start;padding:24px;display:flex}
+.step-n{color:var(--gold);font-family:"Playfair Display",Times,serif;font-size:40px;line-height:1}
+.step-body{flex-direction:column;display:flex}
+.step-status{color:var(--gold-deep);letter-spacing:.24em;text-transform:uppercase;margin:0 0 4px;font-size:12px;font-weight:600}
+.step-title{letter-spacing:.03em;text-transform:uppercase;margin:0 0 6px;font-size:24px}
+.step-text{margin:0;font-size:16px}
+.site-photos{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:28px}
+.site-photos a{display:block;aspect-ratio:1;overflow:hidden;background:var(--stone)}
+.site-photos img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.site-photos a:hover img{transform:scale(1.06)}
+
+/* company / contact */
+.svc-grid{gap:16px;grid-template-columns:1fr 1fr;display:grid}
+.svc{background-color:#fff;border-top:3px solid var(--gold);height:100%;padding:32px 30px}
+.svc-n{color:var(--gold);font-family:"Playfair Display",Times,serif;font-size:44px;line-height:1}
+.svc-title{letter-spacing:.03em;text-transform:uppercase;margin:12px 0 8px;font-size:24px}
+.svc-text{margin:0;font-size:16px}
+.wa-big{color:var(--taupe-dark);letter-spacing:.02em;border-bottom:2px solid var(--gold);margin-top:26px;font-family:"Playfair Display",Times,serif;font-size:clamp(30px,6vw,52px);text-decoration:none;display:inline-block}
+.wa-big:hover{color:var(--gold-deep)}
+.social-row{gap:18px;flex-wrap:wrap;justify-content:center;margin-top:28px;display:flex}
+.social-link{color:var(--gold-deep);letter-spacing:.14em;text-transform:uppercase;font-size:14px;font-weight:600;text-decoration:none}
+
+/* villa */
+.villa-hero-img{object-fit:cover;width:100%;height:100%;display:block;position:absolute;inset:0}
+.price-grid{gap:16px;grid-template-columns:repeat(3,1fr);display:grid}
+.spec-grid{gap:1px;background-color:var(--stone);border:1px solid var(--stone);grid-template-columns:repeat(4,1fr);margin-top:24px;display:grid}
+.spec{background-color:var(--ivory);padding:20px}
+.spec-value{color:var(--taupe-dark);margin:0;font-family:"Playfair Display",Times,serif;font-size:20px}
+.villa-desc{text-align:left;margin-top:10px;font-size:18px}
+.room-grid{gap:16px;grid-template-columns:repeat(3,1fr);display:grid}
+.room-card{background-color:#fff;border-top:3px solid var(--gold);text-decoration:none;display:block;position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s}
+.room-card:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(43,33,24,.12)}
+.room-img{aspect-ratio:4/3;object-fit:cover;background-color:var(--stone);width:100%;display:block}
+.room-floor{color:var(--gold-deep);letter-spacing:.24em;text-transform:uppercase;font-size:11px;font-weight:600;margin:14px 18px 0}
+.room-name{color:var(--taupe-dark);letter-spacing:.04em;text-transform:uppercase;margin:6px 0 4px;padding:0 18px;font-family:"Playfair Display",Times,serif;font-size:21px}
+.room-text{color:var(--taupe);margin:0 0 18px;padding:0 18px;font-size:14.5px}
+.room-soon{position:absolute;top:12px;left:12px;background:rgba(43,33,24,.75);color:#fff;font-size:11px;letter-spacing:.18em;text-transform:uppercase;padding:6px 10px;border-radius:2px}
+
+/* materials and finishes */
+.mf-section{background-color:var(--ivory);padding:72px 0 80px}
+.mf-wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.mf-eyebrow{color:var(--gold-deep);letter-spacing:.26em;text-transform:uppercase;margin:0 0 12px;font-size:12px;font-weight:600;line-height:1}
+.mf-line{background-color:var(--gold);width:48px;height:2px;margin:0 0 18px;display:block}
+.mf-h2{color:var(--taupe-dark);letter-spacing:.04em;text-transform:uppercase;margin:0 0 12px;font-size:clamp(28px,4vw,42px);line-height:1.1}
+.mf-lede{color:var(--taupe);max-width:720px;margin:0 0 36px;font-size:16px;line-height:1.6}
+.mf-group{margin:0 0 40px}
+.mf-h3{color:var(--taupe-dark);letter-spacing:.05em;text-transform:uppercase;margin:0 0 4px;font-size:24px}
+.mf-sub{color:#8c7d6e;margin:0 0 16px;font-size:14px}
+.mf-grid{gap:12px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));display:grid}
+.mf-item{background-color:#fff;border:1px solid var(--stone);border-top:3px solid var(--gold);padding:14px 16px}
+.mf-code{color:var(--gold-deep);letter-spacing:.18em;text-transform:uppercase;margin:0 0 8px;font-size:12px;font-weight:700;line-height:1}
+.mf-name{color:var(--taupe-dark);margin:0 0 4px;font-family:"Playfair Display",Times,serif;font-size:18px;line-height:1.25}
+.mf-brand{color:var(--ink);margin:0 0 6px;font-size:13px;font-weight:600;line-height:1.3}
+.mf-where{color:var(--taupe);margin:0 0 8px;font-size:13.5px;line-height:1.45}
+.mf-rooms{color:#8c7d6e;font-size:12.5px;line-height:1.45}
+.mf-rl{color:var(--gold-deep);letter-spacing:.12em;text-transform:uppercase;margin-right:4px;font-size:11px;font-weight:600}
+.mf-note{color:#8c7d6e;max-width:720px;font-size:13px}
+
+/* prose pages (privacy) and 404 */
+.prose{max-width:760px;margin:0 auto;padding:130px 20px 80px}
+.prose h1{font-size:clamp(32px,5vw,48px);text-transform:uppercase;letter-spacing:.03em;margin:0 0 20px}
+.prose h2{font-size:24px;margin:30px 0 8px}
+.notfound .page-band{position:absolute}
+
+/* footer */
+.site-footer{background-color:var(--stone);border-top:1px solid var(--gold);padding:64px 20px 28px}
+.footer-wrap{gap:40px;grid-template-columns:2fr 1fr 1fr;max-width:1180px;margin:0 auto;display:grid}
+.footer-col-wide{flex-direction:column;display:flex}
+.footer-col{gap:8px;flex-direction:column;display:flex}
+.footer-brand{color:var(--taupe-dark);letter-spacing:.08em;text-transform:uppercase;margin:0 0 12px;font-family:"Playfair Display",Times,serif;font-size:24px}
+.footer-text{max-width:440px;margin:0;font-size:15px}
+.footer-head{color:var(--gold-deep);letter-spacing:.26em;text-transform:uppercase;margin:0 0 6px;font-size:12px;font-weight:600}
+.footer-link{color:var(--taupe-dark);font-size:15px;text-decoration:none}
+.footer-link:hover{color:var(--gold-deep)}
+.footer-legal{border-top:1px solid #6b5d5033;max-width:1180px;margin:44px auto 0;padding-top:20px}
+.footer-note{color:var(--taupe);margin:0 0 6px;font-size:13px}
+.footer-note a{color:inherit}
+
+/* motion (replaces the Webflow IX3 interactions) */
+@keyframes psMarquee{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
+@keyframes psLine{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.gold-line{transform-origin:left center;animation:psLine 1.1s cubic-bezier(.2,.7,.2,1) both}
+.band-inner .gold-line{transform-origin:center}
+@keyframes psRise{from{opacity:0;transform:translate3d(0,28px,0)}to{opacity:1;transform:none}}
+.hero-band .band-inner>*,.page-band>*{animation:psRise .9s cubic-bezier(.2,.7,.2,1) both}
+.hero-band .band-inner>*:nth-child(2),.page-band>*:nth-child(2){animation-delay:.08s}
+.hero-band .band-inner>*:nth-child(3),.page-band>*:nth-child(3){animation-delay:.16s}
+.hero-band .band-inner>*:nth-child(4),.page-band>*:nth-child(4){animation-delay:.26s}
+.hero-band .band-inner>*:nth-child(5){animation-delay:.36s}
+@keyframes psDrift{from{transform:scale(1.12)}to{transform:scale(1)}}
+.page-hero>.page-hero-img,.page-hero>.villa-hero-img{animation:psDrift 9s ease-out both}
+@keyframes psPulse{0%{box-shadow:0 0 0 0 rgba(200,157,100,.55)}70%{box-shadow:0 0 0 16px rgba(200,157,100,0)}100%{box-shadow:0 0 0 0 rgba(200,157,100,0)}}
+.btn-enter{animation:psPulse 2.4s ease-out 1.2s infinite}
+.js .reveal{opacity:0;transform:translate3d(0,32px,0);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.in{opacity:1;transform:none}
+.js .stagger>*{opacity:0;transform:translate3d(0,26px,0);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.js .stagger.in>*{opacity:1;transform:none}
+.hero-media{will-change:transform}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.js .reveal,.js .stagger>*{opacity:1;transform:none}}
+
+/* responsive */
+@media screen and (max-width:991px){.nav{display:none}.menu-btn{display:flex}.cards{grid-template-columns:1fr 1fr}.price-grid{grid-template-columns:1fr}.spec-grid{grid-template-columns:1fr 1fr}.room-grid{grid-template-columns:1fr 1fr}.site-photos{grid-template-columns:repeat(3,1fr)}}
+@media screen and (max-width:767px){.hero-band{padding-top:22px;padding-bottom:26px}.choice-grid{grid-template-columns:1fr}.footer-wrap{gap:28px;grid-template-columns:1fr}.svc-grid{grid-template-columns:1fr}.room-grid{grid-template-columns:1fr}.site-photos{grid-template-columns:repeat(2,1fr)}}
+@media screen and (max-width:479px){.btn-ghost{min-width:96px}.cards{gap:10px;grid-template-columns:1fr 1fr}.card-title{font-size:17px}.card-sub{display:none}}
+
+/* explore cards and page hero photos */
+.cimg-tour{background-image:url("https://res.cloudinary.com/vhtu15vv/image/upload/f_auto,q_auto,c_fill,ar_4:5,g_auto,w_900/psusennes/originals/02_kitchen_dining_living")}
+.cimg-plan{background-image:url("https://res.cloudinary.com/vhtu15vv/image/upload/f_auto,q_auto,c_fill,ar_4:5,g_auto,w_900/psusennes/originals/16_rooftop")}
+.cimg-villa{background-image:url("https://res.cloudinary.com/vhtu15vv/image/upload/f_auto,q_auto,c_fill,ar_4:5,g_auto,w_900/psusennes/originals/07_pool_sun_deck")}
+.cimg-progress{background-image:url("https://res.cloudinary.com/vhtu15vv/image/upload/f_auto,q_auto,c_fill,ar_4:5,g_auto,w_900/psusennes/originals/18_back_facade")}
+
+/* currency switcher */
+
+.ps-fx{white-space:nowrap;opacity:.9;font-size:.86em;margin-left:.45em}
+.ps-fx-note{display:block;font-size:12px;letter-spacing:.04em;opacity:.75;margin-top:6px;text-transform:none;font-weight:400}
+.ps-cur{position:relative;display:flex;align-items:center;margin-left:14px;color:#fff;font-family:Jost,sans-serif}
+.site-header.is-scrolled .ps-cur,.site-header.on-light .ps-cur,.site-header.is-open .ps-cur{color:#4a3f35}
+.ps-cur-btn{min-height:40px;padding:0 12px;border:1px solid #c89d64;border-radius:2px;background:transparent;color:inherit;font:600 12px/1 Jost,sans-serif;letter-spacing:.14em;cursor:pointer}
+.ps-cur-pop{position:absolute;right:0;top:calc(100% + 8px);width:300px;max-height:min(70vh,440px);display:none;flex-direction:column;background:#f8f4ec;border-top:3px solid #c89d64;box-shadow:0 18px 40px rgba(43,33,24,.25);z-index:200;color:#4a3f35}
+.ps-cur.open .ps-cur-pop{display:flex}
+.ps-cur-pop input{margin:10px;min-height:42px;padding:0 12px;border:1px solid #e4dccf;border-radius:2px;font:400 16px Jost,sans-serif;background:#fff;color:#4a3f35}
+.ps-cur-pop ul{list-style:none;margin:0;padding:0 0 8px;overflow:auto}
+.ps-cur-pop li{display:flex;gap:10px;padding:10px 14px;cursor:pointer;font-size:14px}
+.ps-cur-pop li b{min-width:38px;font-weight:600;letter-spacing:.06em}
+.ps-cur-pop li[aria-selected=true],.ps-cur-pop li:hover,.ps-cur-pop li.act{background:#efe6d8}
+.ps-cur-pop li.sep{border-top:1px solid #e4dccf}
+@media (max-width:991px){.ps-cur{margin-left:auto;margin-right:6px}.ps-cur-pop{position:fixed;left:0;right:0;top:auto;bottom:0;width:auto;max-height:75vh}}
