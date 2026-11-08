@@ -27,6 +27,14 @@ RewriteCond %{DOCUMENT_ROOT}/$1.html -f
 RewriteRule ^([^.]+)$ /$1.html [L]
 </IfModule>
 
+# lead form data: never served (leads are normally stored outside public_html)
+<FilesMatch "\.(csv|log)$">
+Require all denied
+</FilesMatch>
+<IfModule mod_rewrite.c>
+RewriteRule ^_leads(/|$) - [F,L]
+</IfModule>
+
 <IfModule mod_deflate.c>
 AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml application/xml application/javascript text/javascript application/json application/manifest+json image/svg+xml
 </IfModule>
