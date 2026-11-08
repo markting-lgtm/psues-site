@@ -266,3 +266,11 @@ p{margin:0 0 10px}
 .video-card h3{font-size:17px;line-height:1.4;margin:0}
 .read-more a{white-space:nowrap}
 .lang-switch{display:flex;flex-wrap:wrap;row-gap:6px}
+
+/* more guides */
+.more-guides{margin:40px 0 8px;padding-top:24px;border-top:1px solid rgba(200,157,100,.45)}
+.more-guides h2{font-size:22px;margin:0 0 8px}
+
+/* lang switch spacing */
+.lang-switch{display:flex;flex-wrap:wrap;gap:6px 18px}
+.lang-switch a{margin-right:0}
